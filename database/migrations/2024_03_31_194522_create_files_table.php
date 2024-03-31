@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('file_id')->constrained('files');
+            $table->foreignId('user_id')->constrained('users');
+            $table->timestamps();            
         });
     }
 
