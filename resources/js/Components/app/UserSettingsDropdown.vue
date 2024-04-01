@@ -1,5 +1,5 @@
 <template>
   <div>
-    Navigation
+    User Settings
   </div>
 </template>
