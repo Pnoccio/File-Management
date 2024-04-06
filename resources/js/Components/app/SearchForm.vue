@@ -10,8 +10,10 @@
 </template>
 
 <script setup>
-import NavLink from '@/Components/TextInput.vue';
-import { useForm} from '@inertiajs/vue3'
+
+//imports
+import TextInput from '@/Components/TextInput.vue';
+import { useForm } from '@inertiajs/vue3'
 
 // uses 
 const form = useForm({

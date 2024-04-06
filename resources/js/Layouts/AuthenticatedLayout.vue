@@ -3,7 +3,7 @@
         <Navigation />
 
         <main class="flex flex-col flex-1 px-4 overflow-hidden">
-            <div class="flex item-center justify-between w-full">
+            <div class="flex items-center justify-between w-full">
                 <SearchForm/>
                 <UserSettingsDropdown/>
             </div>
