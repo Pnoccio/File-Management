@@ -1,16 +1,16 @@
 <template>
   <nav class="min-w-[200px]">
-    <div class="h-[80px] px-3 flex items-center gap-3">
-      <Link href="/">
+    <div >
+      <Link :href="route('myFiles')" class="h-[80px] px-3 flex items-center gap-3">
       <ApplicationLogo class="block h-9 w-auto fill-current text-gray-800" />
-      </Link>
       BoldStorage
+      </Link>
     </div>
     <div class="px-3">
       <CreateNewDropDown />
 
       <div class="px-3">
-        <NavLink href="/">My Files</NavLink>
+        <NavLink :href="route('myFiles')" :active="$page.url == '/my-files'">My Files</NavLink>
         <NavLink href="/">Shared with Me</NavLink>
         <NavLink href="/">Shared by Me</NavLink>
         <NavLink href="/">Trash</NavLink>

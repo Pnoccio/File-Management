@@ -13,9 +13,16 @@ return new class extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('file_id')->constrained('files');
-            $table->foreignId('user_id')->constrained('users');
-            $table->timestamps();            
+            $table->string('name', 1024);
+            $table->string('path', 1024)->nullable();
+            $table->nestedSet();
+            $table->boolean('is_folder');
+            $table->string('mime')->nullable();
+            $table->integer('size')->nullable();
+            $table->timestamps();
+            $table->foreignId('created_by')->constrained()->on('users');
+            $table->foreignId('updated_by')->constrained()->on('users');
+            $table->softDeletes();
         });
     }
 
